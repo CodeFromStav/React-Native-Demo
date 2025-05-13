@@ -1,4 +1,8 @@
 import { Stack } from "expo-router";
+import { LogBox } from "react-native";
+
+LogBox.ignoreAllLogs(true);
+// Ignore all log notifications
 
 export default function RootLayout() {
   return (
@@ -16,6 +20,12 @@ export default function RootLayout() {
         {
           {headerTitle: "About"}
         }/>
+
+         <Stack.Screen 
+          name="(tabs)" 
+          options={{ headerShown: false }
+          }/>
     </Stack>
+    
   )
 }
