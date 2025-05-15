@@ -1,11 +1,14 @@
 import { Stack } from "expo-router";
+import { StatusBar } from 'expo-status-bar';
 import { LogBox } from "react-native";
+
 
 LogBox.ignoreAllLogs(true);
 // Ignore all log notifications
 
 export default function RootLayout() {
   return (
+    <>
     <Stack>
       <Stack.Screen 
         name = "index" 
@@ -26,6 +29,9 @@ export default function RootLayout() {
           options={{ headerShown: false }
           }/>
     </Stack>
+    <StatusBar style="light" />
+
+    </>
     
-  )
+  );
 }
